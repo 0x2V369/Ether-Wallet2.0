@@ -162,7 +162,7 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "addressToCheck",
+						"name": "addr",
 						"type": "address"
 					}
 				],
@@ -200,16 +200,16 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "_address",
+						"name": "candidate",
 						"type": "address"
 					}
 				],
 				"name": "countTrueVotes",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "uint8",
 						"name": "",
-						"type": "uint256"
+						"type": "uint8"
 					}
 				],
 				"stateMutability": "view",
@@ -239,7 +239,7 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "resetAddress",
+						"name": "addr",
 						"type": "address"
 					}
 				],
@@ -252,7 +252,7 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "addressAllowance",
+						"name": "addr",
 						"type": "address"
 					},
 					{
@@ -270,7 +270,7 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "votingFor",
+						"name": "candidate",
 						"type": "address"
 					}
 				],
@@ -304,7 +304,73 @@
 		],
 		"devdoc": {
 			"kind": "dev",
-			"methods": {},
+			"methods": {
+				"addGuardian(address)": {
+					"details": "Adds a new guardian",
+					"params": {
+						"newGuardian": "The address of the new guardian"
+					}
+				},
+				"checkAllowance(address)": {
+					"details": "Checks the allowance of a specified address",
+					"params": {
+						"addr": "The address to check"
+					},
+					"returns": {
+						"_0": "The allowance amount"
+					}
+				},
+				"checkGuardian(address)": {
+					"details": "Checks if an address is a guardian",
+					"params": {
+						"guardianAddress": "The address to check"
+					},
+					"returns": {
+						"_0": "True if the address is a guardian, false otherwise"
+					}
+				},
+				"constructor": {
+					"details": "Sets the contract deployer as the owner and the first guardian"
+				},
+				"countTrueVotes(address)": {
+					"details": "Counts the number of true votes for a specified address",
+					"params": {
+						"candidate": "The address to count votes for"
+					},
+					"returns": {
+						"_0": "count The number of votes"
+					}
+				},
+				"deposit()": {
+					"details": "Records the deposit and updates the sender's balance"
+				},
+				"resetAddressAllowance(address)": {
+					"details": "Resets the allowance for a specified address",
+					"params": {
+						"addr": "The address for which to reset the allowance"
+					}
+				},
+				"setAllowance(address,uint256)": {
+					"details": "Sets the allowance for a specified address",
+					"params": {
+						"addr": "The address for which to set the allowance",
+						"newAllowance": "The new allowance amount"
+					}
+				},
+				"voteNewOwner(address)": {
+					"details": "Allows guardians to vote for a new owner",
+					"params": {
+						"candidate": "The address of the candidate for the new owner"
+					}
+				},
+				"withdraw(address,uint256)": {
+					"details": "Allows the sender to withdraw a specified amount of Ether to a specified address",
+					"params": {
+						"amount": "The amount of Ether to withdraw",
+						"to": "The address to send the Ether to"
+					}
+				}
+			},
 			"version": 1
 		},
 		"userdoc": {
@@ -330,11 +396,11 @@
 	},
 	"sources": {
 		"contracts/EtherWallet2.sol": {
-			"keccak256": "0xf6b66c15e5c52d3a24980e2b2d3e3f76c428e2e39f59b007b8adfb562af3fa18",
+			"keccak256": "0x53c3d4d8f3be397f5f3f88bba6a4ecfa9bb77c13f2576b2f56778540fad1257c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://e1e32bd45cfc4af19a6ec73287191c061d1f835655320b5c6b88e834edf68dd2",
-				"dweb:/ipfs/QmPPnhHg5t17DKHGkDw675JfvG2Gc6JD4NqXZE6DRmzQ9x"
+				"bzz-raw://511bd75baca8fc597d5d96fb114d2a47a3cf234a7f3bfa54e1c133d082bf919e",
+				"dweb:/ipfs/QmcPEeprFa6kU2364Wgg1skpgP9zQMyEd6ii9E9B4AUVoh"
 			]
 		}
 	},
