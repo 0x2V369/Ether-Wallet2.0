@@ -9,7 +9,7 @@ contract EtherWallet2{
 
     address public owner;
     address[] private guardianList;
-
+    uint8 private constant MINIMUM_VOTE_COUNT = 3;
 
     event ReceivedFunds(address indexed from, uint256 amount, uint256 fundsAvailable, uint256 timestamp);
     event WithdrawFunds(address indexed from, address indexed to, uint256 amount, uint256 fundsAvailable, uint256 timestamp);
@@ -94,7 +94,6 @@ contract EtherWallet2{
         allowance[addr] = 0;
     }
     
-
     /// @dev Allows guardians to vote for a new owner
     /// @param candidate The address of the candidate for the new owner
     function voteNewOwner(address candidate) public onlyGuardian{
@@ -105,7 +104,7 @@ contract EtherWallet2{
         emit VoteForNewOwner(msg.sender, candidate, block.timestamp);
 
         //check total votes for the give address _votingFor
-        if(countTrueVotes(candidate) >= 3){
+        if(countTrueVotes(candidate) >= MINIMUM_VOTE_COUNT){
             setNewOwner(candidate);
             emit NewOwnerSet(candidate, block.timestamp);
         }
