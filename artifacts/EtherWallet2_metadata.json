@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.15+commit.e14f2714"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"EtherWallet2.sol": "EtherWallet2"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"EtherWallet2.sol": {
+			"keccak256": "0xa846e1c35cb5444a924732c0aca2ad4c03e231c4f4bf2842c02ae7769aca4b19",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8bbbc3a5cb0c31d027370e094e232b86c95316890f9d6b1f9010f5851edca427",
+				"dweb:/ipfs/QmXS44X6xbUEaNdsbfHsK1H2Db6Cwg3EV8uHnFFa828Lzz"
+			]
+		}
+	},
+	"version": 1
+}
