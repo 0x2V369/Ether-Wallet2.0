@@ -70,3 +70,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - Inspired by decentralized governance models.
 - Developed as part of a learning project in Solidity.
+
+## Further work
+
+- Add Reentracy guard
+- See if the mappings for votes and guardians can be consolidated e.g. with a struct
+
