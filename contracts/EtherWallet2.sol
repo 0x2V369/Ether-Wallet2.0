@@ -53,7 +53,7 @@ contract EtherWallet2{
 
     /// @dev Records the deposit and updates the sender's balance
     function deposit() public payable {
-        balances[msg.sender] = msg.value;
+        balances[msg.sender] += msg.value;
         emit ReceivedFunds(msg.sender, msg.value, balances[msg.sender], block.timestamp);
     }
 
