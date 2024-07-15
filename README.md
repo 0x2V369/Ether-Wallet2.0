@@ -75,4 +75,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - Add Reentracy guard
 - See if the mappings for votes and guardians can be consolidated e.g. with a struct
+- Set count to zero for Address once it becomes the new owner
 
